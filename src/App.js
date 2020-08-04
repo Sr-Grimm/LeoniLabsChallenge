@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import SearchPage from './Components/screens/SearchPage';
+import DetailPage from './Components/screens/DetailPage';
+import Header from './Components/templates/Header';
+import Footer from './Components/templates/Footer';
+import Container from "./Components/atoms/Container";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Router>
+    <Redirect from="/" to="/searcher" />
+    <Container flexD="column" bgColor="black" width="100%" height="100%">
+      <Header></Header>
+      <Container width="100%" height="85%">
+        <Switch>
+          <Route  path="/searcher">
+            <SearchPage/>
+          </Route>
+          <Route path="/detail/:id" render={(props) => <DetailPage {...props}/>}/>
+        </Switch>
+      </Container>
+      <Footer></Footer>
+    </Container>
+  </Router>
   );
 }
-
-export default App;

@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LeoniLabs Searcher
+Leonilabs searcher is a challenge where i used React and jest to make it.
+here you can search members of ProPublica API on simple mode filtering by:
+  - First Name
+  - Middle Name
+  - Second Name
+  - Party
+  - Birth date ("yyyy-mm-dd" format)
+  - Gender
 
-## Available Scripts
+.
+¡or all together and more in advanced mode!
+You can also:
+  - Go to member page and see all details.
+  - Go to members personal page and social medias.
+  - Go to creator's linkedin and hire him.
 
-In the project directory, you can run:
+### Tech
+LeoniLabs uses a number of open source projects to work properly:
 
-### `npm start`
+* [React] - An open-source JavaScript library for building user interfaces.
+* [Jest] - A JavaScript testing framework maintained by Facebook.
+* [Enzyme] - A JavaScript Testing utility for React that makes it easier to test your React Components.
+* [Styled components] A CSS-in-JS tool that bridges the gap between components and styling.
+* [React-icons] - A library of icons for React.
+* [Eslint] - A static code analysis tool for identifying problematic patterns found in JavaScript code.
+* [React-router-dom] - A collection of navigational components that compose declaratively with React applications.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+LeoniLabs Searcher requires [Node.js](https://nodejs.org/) v12.18.2 to run.
 
-### `npm test`
+Clone the repo from github.
+```sh
+$ git clone https://github.com/AgustinFredes98/LeoniLabsChallenge.git
+```
+Then install the dependencies and devDependencies and start the server.
+```sh
+$ cd LeoniLavsChallenge
+$ nvm i
+$ npm i
+$ npm start
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+now go to your [Local Host URL](http://localhost:3000) at port 3000 and that should be enought.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Now you have the app running, ¡Enjoy!.
