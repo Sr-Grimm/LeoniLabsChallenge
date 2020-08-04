@@ -39,9 +39,9 @@ const Details = ({data}) => {
           )
         }
         {
-          !!i.senioriy && (
+          !!i.seniority && (
             <TextWithMargin color="white">
-              {`Seniority: ${i.senioriy}`}
+              {`Seniority: ${i.seniority}`}
             </TextWithMargin>
           )
         }

@@ -9,8 +9,7 @@ import {
 } from "react-router-dom";
 
 const MemberCard = ({data}) => {
-  console.log("Spawned")
-  return(
+  return (
     <StyledMemberCard 
     bgColor="#DDDDDD"
     bRadius="10px"

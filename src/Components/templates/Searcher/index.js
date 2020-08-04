@@ -107,11 +107,14 @@ const Searcher = ({search}) => {
 
   const simpleSearch = () => {
     return(
-    <Container align="center" justify="flex-start" flexD="column">
-      <Container flexD="column" margin="20px 0px 0px 0px">
-        <input placeholder="Search here" onChange={(e) => {
-          setSearchSlot(singleSearchType, e.target.value)
-        }} type="text"/>
+    <Container align="center" justify="center" flexD="column">
+      <Container align="center" justify="center" flexD="column" margin="20px 0px 0px 0px">
+        <TextInput
+          width="90%" 
+          itemData={singleSearchType} 
+          setSlot={setSearchSlot}
+          formattedName="Search here"
+        />
       </Container>
       <Container align="flex-start" flexD="column" margin="10px 0px">
         <RadioInput margin="5px 0px" returnValue={setSimpleType} group="simpleValue" value="first_name" label="First name"/>
@@ -131,19 +134,24 @@ const Searcher = ({search}) => {
           <Text textDecoration="underline" color="white">
             Gender:
           </Text>
-          <Container>
+          <Container width="100%" justify="center" align="center" flexW="wrap">
             <RadioInput margin="5px 0px" returnValue={setGender} group="simpleValue" value="M" label="Male"/>
             <RadioInput margin="5px 0px" returnValue={setGender} group="simpleValue" value="" label="All"/>
             <RadioInput margin="5px 0px" returnValue={setGender} group="simpleValue" value="F" label="Female"/>
           </Container>
         </Container>
-        <Container mb="16px" align="center" justify="flex-start" flexD="column">
+        <Container mb="16px" flexD="column">
           {Object.keys(searchValues).map((i) => {
             if (formattedNames[i]) {
               return(
-                <Container margin="3px 0px" key={`${i}-text-input`} flexD="column" align="center" justify="center">
-                  <Container align="center" justify="flex-start">
-                    <CheckBox toggle={(value) => toggleSlot(i, value)}></CheckBox>
+                <Container width="100%"  margin="3px 0px" key={`${i}_input_container`} flexD="column" align="center" justify="center">
+                    <Container justify="flex-start" width="73%">
+                      <CheckBox test-key={i} toggle={(value) => toggleSlot(i, value)}/>
+                      <Text color="white">
+                        {formattedNames[i]}:
+                      </Text>
+                    </Container>
+                  <Container align="center" justify="center">
                     <TextInput itemData={i} setSlot={setSearchSlot} active={!activeAdvancedSlots[i]} formattedName={formattedNames[i]}/>
                   </Container>
                 </Container>

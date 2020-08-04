@@ -1,6 +1,5 @@
 const doSearch = (query, queryRetornator) => {
   if (!query.isAdvanced && query.value.value !== "default") {
-    console.log(query)
     queryRetornator([{value: query.value.type, regex: new RegExp(query.value.value, "igm")}]);
     return;
   } else {

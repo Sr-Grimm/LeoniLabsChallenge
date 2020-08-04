@@ -36,10 +36,15 @@ $ git clone https://github.com/AgustinFredes98/LeoniLabsChallenge.git
 ```
 Then install the dependencies and devDependencies and start the server.
 ```sh
-$ cd LeoniLavsChallenge
+$ cd LeoniLabsChallenge
 $ nvm i
 $ npm i
 $ npm start
+```
+
+you can also try the tests.
+```sh
+$ npm run test -- --coverage --watchAll --silent
 ```
 
 now go to your [Local Host URL](http://localhost:3000) at port 3000 and that should be enought.

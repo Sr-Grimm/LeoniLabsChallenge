@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import {StyledTextInput} from './style';
 
-const TextInput = ({active, itemData, setSlot, formattedName}) => {
+const TextInput = ({active, itemData, setSlot, formattedName, width}) => {
 
   const [textValue, setTextValue] = useState("");
 
@@ -15,13 +16,20 @@ const TextInput = ({active, itemData, setSlot, formattedName}) => {
   }, [active])
 
   return(
-    <input disabled={active} value={textValue} placeholder={formattedName} onChange={(e) => {
-      handleChange(e.target.value)
-    }} type="text"/>
+    <StyledTextInput
+      width={width}
+      disabled={active}
+      value={textValue}
+      placeholder={formattedName}
+      onChange={(e) => {
+        handleChange(e.target.value)
+      }} type="text"
+    />
   );
 };
 
 TextInput.propTypes = {
+  width: PropTypes.string,
   active: PropTypes.bool,
   itemData: PropTypes.string.isRequired,
   setSlot: PropTypes.func.isRequired,
@@ -29,6 +37,7 @@ TextInput.propTypes = {
 };
 
 TextInput.defaultProps = {
+  width: "70%",
   active: false
 };
 

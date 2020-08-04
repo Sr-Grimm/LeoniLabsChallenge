@@ -11,7 +11,7 @@ const DetailPage = () => {
   const [data, setData] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [errorFetch, setErrorFetch] = useState({
-    state: false,
+    status: false,
     message: undefined
   });
 
@@ -24,7 +24,8 @@ const DetailPage = () => {
     .then(response => response.json())
     .then(data => setData(data))
     .catch((e) => {
-      setErrorFetch({state: true, message: e.message})
+      setIsLoading(false);
+      setErrorFetch({status: true, message: e.message})
     })
   }, [id]);
 
@@ -42,7 +43,7 @@ const DetailPage = () => {
     )
   }
 
-  if (errorFetch.status) {
+  if (data === false || errorFetch.status) {
     return(
       <GenericErrorScreen errorMessage={errorFetch.message} />
     )

@@ -10,7 +10,6 @@ const Results = ({isLoading, data, query}) => {
   const [queryList, setQueryList] = useState([])
 
   useEffect(() => {
-    console.log(query)
     setQueryList(query)
   }, [query])
   

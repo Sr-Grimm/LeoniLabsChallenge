@@ -41,7 +41,7 @@ SocialNetworkLink.propTypes = {
   size: PropTypes.string,
   color: PropTypes.string,
   url: PropTypes.string.isRequired,
-  icon: PropTypes.oneOf(["twitter","youtube","facebook","web","linkedin"]).isRequired
+  icon: PropTypes.oneOf(["twitter","youtube","facebook","web","linkedin","default"]).isRequired
 };
 
 SocialNetworkLink.defaultProps = {

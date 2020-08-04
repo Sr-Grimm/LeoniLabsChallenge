@@ -30,7 +30,12 @@ const SearchPage = () => {
   }, []);
   
   const searchHandler = (params) => {
-    doSearch(params, setQuery);
+    console.log(params)
+    if (params.value.type !== "default") {
+      doSearch(params, setQuery);
+    } else {
+      alert("Please select a field to search");
+    }
   }
 
   useEffect(() => {

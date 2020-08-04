@@ -22,7 +22,9 @@ export default function App() {
           <Route  path="/searcher">
             <SearchPage/>
           </Route>
-          <Route path="/detail/:id" render={(props) => <DetailPage {...props}/>}/>
+          <Route path="/detail/:id">
+            <DetailPage />
+          </Route>
         </Switch>
       </Container>
       <Footer></Footer>
